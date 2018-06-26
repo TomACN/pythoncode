@@ -9,13 +9,13 @@ app = Flask(__name__)
 app.config.from_object(Configuration)
 db = SQLAlchemy(app)
 
-# GET request to ip.jsontest.com
+# GET request to ip.jsontest.com a
 def home():
     # My microservice!
     return render_template('home.html')
 
 def rest_request_example():
-    print (requests.get("http://140.86.15.104:3000/fighters/45/9/yellow/Greg").text)
+    print (requests.get("http://140.86.15.104:3000/fighters/45/9/yellow/Greg/").text)
 
 def read_db_SQL_example():
     conn = db.get_engine().connect()
